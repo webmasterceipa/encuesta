@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --ceipa-50: #eef9f6;
+  --ceipa-100: #d5f0e9;
+  --ceipa-500: #1a9b84;
+  --ceipa-600: #0f6b5c;
+  --ceipa-700: #0a5247;
+  --ceipa-800: #084038;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-sans), "Segoe UI", sans-serif;
+  min-height: 100dvh;
+}
+
+h1,
+h2 {
+  font-family: var(--font-display), Georgia, serif;
+}
+
+@layer components {
+  .field-input {
+    @apply w-full rounded-xl border border-slate-300 bg-white px-3 py-2.5 text-sm text-slate-900 shadow-sm outline-none transition placeholder:text-slate-400 focus:border-ceipa-500 focus:ring-2 focus:ring-ceipa-500/20;
+  }
+}
